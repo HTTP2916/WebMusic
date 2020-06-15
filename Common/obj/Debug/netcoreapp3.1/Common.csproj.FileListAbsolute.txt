@@ -1,0 +1,10 @@
+F:\Web\Music\Common\bin\Debug\netcoreapp3.1\Common.deps.json
+F:\Web\Music\Common\bin\Debug\netcoreapp3.1\Common.dll
+F:\Web\Music\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
+F:\Web\Music\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
+F:\Web\Music\Common\bin\Debug\netcoreapp3.1\Common.runtimeconfig.json
+F:\Web\Music\Common\bin\Debug\netcoreapp3.1\Common.runtimeconfig.dev.json
+F:\Web\Music\Common\bin\Debug\netcoreapp3.1\Common.pdb
+F:\Web\Music\Common\obj\Debug\netcoreapp3.1\Common.dll
+F:\Web\Music\Common\obj\Debug\netcoreapp3.1\Common.pdb
+F:\Web\Music\Common\obj\Debug\netcoreapp3.1\Common.csprojAssemblyReference.cache

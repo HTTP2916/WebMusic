@@ -1,0 +1,15 @@
+F:\Web\Music\BLL\bin\Debug\netcoreapp3.1\BLL.deps.json
+F:\Web\Music\BLL\bin\Debug\netcoreapp3.1\BLL.dll
+F:\Web\Music\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfoInputs.cache
+F:\Web\Music\BLL\obj\Debug\netcoreapp3.1\BLL.AssemblyInfo.cs
+F:\Web\Music\BLL\bin\Debug\netcoreapp3.1\BLL.runtimeconfig.json
+F:\Web\Music\BLL\bin\Debug\netcoreapp3.1\BLL.runtimeconfig.dev.json
+F:\Web\Music\BLL\bin\Debug\netcoreapp3.1\BLL.pdb
+F:\Web\Music\BLL\obj\Debug\netcoreapp3.1\BLL.dll
+F:\Web\Music\BLL\obj\Debug\netcoreapp3.1\BLL.pdb
+F:\Web\Music\BLL\obj\Debug\netcoreapp3.1\BLL.csprojAssemblyReference.cache
+F:\Web\Music\BLL\bin\Debug\netcoreapp3.1\Common.dll
+F:\Web\Music\BLL\bin\Debug\netcoreapp3.1\DAL.dll
+F:\Web\Music\BLL\bin\Debug\netcoreapp3.1\Common.pdb
+F:\Web\Music\BLL\bin\Debug\netcoreapp3.1\DAL.pdb
+F:\Web\Music\BLL\obj\Debug\netcoreapp3.1\BLL.csproj.CopyComplete
