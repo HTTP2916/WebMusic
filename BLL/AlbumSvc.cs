@@ -1,4 +1,5 @@
 ﻿using Common.BLL;
+using Common.Req;
 using Common.Rsp;
 using DAL;
 using DAL.Models;
@@ -35,5 +36,43 @@ namespace BLL
             };
             return res;
         }
+
+        // Remove 
+        public SingleRsp DeleteAlbum(string Ma)
+        {
+            var res = new SingleRsp();
+            try
+            {
+                res.Data = _rep.Remove(Ma);
+            }
+            catch (Exception ex)
+            {
+                res.SetError(ex.StackTrace);
+            }
+            return res;
+        }
+
+        public SingleRsp CreateAlbum(AlbumReq alb)
+        {
+            var res = new SingleRsp();
+            Album album = new Album();
+            album.MaAb = alb.MaAb;
+            album.TenAb = alb.TenAb;
+            album.GhiChu = alb.GhiChu;
+            res = _rep.CreateAlbum(album);
+            return res;
+        }
+
+        public SingleRsp UpdateAlbum(AlbumReq alb)
+        {
+            var res = new SingleRsp();
+            Album album = new Album();
+            album.MaAb = alb.MaAb;
+            album.TenAb = alb.TenAb;
+            album.GhiChu = alb.GhiChu;
+            res = _rep.UpdateAlbum(album);
+            return res;
+        }
+
     }
 }

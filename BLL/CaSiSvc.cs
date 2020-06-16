@@ -6,6 +6,7 @@ using Common.BLL;
 using System.Linq;
 using DAL;
 using DAL.Models;
+using Common.Req;
 
 namespace BLL
 {
@@ -34,6 +35,49 @@ namespace BLL
                 page = page,
                 size = size
             };
+            return res;
+        }
+
+        // Remove 
+        public SingleRsp DeleteCasi(string Ma)
+        {
+            var res = new SingleRsp();
+            try
+            {
+                res.Data = _rep.Remove(Ma);
+            }
+            catch (Exception ex)
+            {
+                res.SetError(ex.StackTrace);
+            }
+            return res;
+        }
+
+        public SingleRsp CreateCasi(CasiReq singer)
+        {
+            var res = new SingleRsp();
+            Casi casi = new Casi();
+            casi.MaCaSi = singer.MaCaSi;
+            casi.TenCaSi = singer.TenCaSi;
+            casi.GioiTinh = singer.GioiTinh;
+            casi.QuocTich = singer.QuocTich;
+            casi.HinhAnh = singer.HinhAnh;
+            casi.GhiChu = singer.GhiChu;
+            res = _rep.CreateCasi(casi);
+            return res;
+        }
+
+        public SingleRsp UpdateCasi(CasiReq singer)
+        {
+            var res = new SingleRsp();
+            Casi casi = new Casi();
+            casi.MaCaSi = singer.MaCaSi;
+            casi.TenCaSi = singer.TenCaSi;
+            casi.GioiTinh = singer.GioiTinh;
+            casi.QuocTich = singer.QuocTich;
+            casi.HinhAnh = singer.HinhAnh;
+            casi.GhiChu = singer.GhiChu;
+            res = _rep.UpdateCasi(casi);
             return res;
         }
     }

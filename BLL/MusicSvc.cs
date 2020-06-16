@@ -7,6 +7,7 @@ using System.Linq;
 
 namespace BLL
 {
+    using Common.Req;
     using DAL;
     using DAL.Models;
     
@@ -39,5 +40,61 @@ namespace BLL
             };
             return res;
         }
+
+        // Remove 
+        public SingleRsp DeleteBaiHat(string Ma)
+        {
+            var res = new SingleRsp();
+            try
+            {
+                res.Data = _rep.Remove(Ma);
+            }
+            catch (Exception ex)
+            {
+                res.SetError(ex.StackTrace);
+            }
+            return res;
+        }
+
+        public SingleRsp CreateBaihat(BaihatReq song)
+        {
+            var res = new SingleRsp();
+            Baihat baihat = new Baihat();
+            baihat.MaBaiHat = song.MaBaiHat;
+            baihat.MaCaSi = song.MaCaSi;
+            baihat.MaTheLoai = song.MaTheLoai;
+            baihat.TenBaiHat = song.TenBaiHat;
+            baihat.QuocGia = song.QuocGia;
+            baihat.FileLoiBaiHat = song.FileLoiBaiHat;
+            baihat.LinkNhac = song.LinkNhac;
+            baihat.NgayTao = song.NgayTao;
+            baihat.NguoiTao = song.NguoiTao;
+            baihat.NgayChinhSua = song.NgayChinhSua;
+            baihat.NguoiChinhSua = song.NguoiChinhSua;
+            baihat.GhiChu = song.GhiChu;
+            res = _rep.CreateBaihat(baihat);
+            return res;
+        }
+
+        public SingleRsp UpdateBaihat(BaihatReq song)
+        {
+            var res = new SingleRsp();
+            Baihat baihat = new Baihat();
+            baihat.MaBaiHat = song.MaBaiHat;
+            baihat.MaCaSi = song.MaCaSi;
+            baihat.MaTheLoai = song.MaTheLoai;
+            baihat.TenBaiHat = song.TenBaiHat;
+            baihat.QuocGia = song.QuocGia;
+            baihat.FileLoiBaiHat = song.FileLoiBaiHat;
+            baihat.LinkNhac = song.LinkNhac;
+            baihat.NgayTao = song.NgayTao;
+            baihat.NguoiTao = song.NguoiTao;
+            baihat.NgayChinhSua = song.NgayChinhSua;
+            baihat.NguoiChinhSua = song.NguoiChinhSua;
+            baihat.GhiChu = song.GhiChu;
+            res = _rep.UpdateBaihat(baihat);
+            return res;
+        }
+
     }
 }

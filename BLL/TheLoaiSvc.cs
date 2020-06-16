@@ -35,5 +35,43 @@ namespace BLL
             };
             return res;
         }
+
+        // Remove 
+        public SingleRsp DeleteTheLoai(string Ma)
+        {
+            var res = new SingleRsp();
+            try
+            {
+                res.Data = _rep.Remove(Ma);
+            }
+            catch (Exception ex)
+            {
+                res.SetError(ex.StackTrace);
+            }
+            return res;
+        }
+
+
+        public SingleRsp CreateTheloai(Theloai category)
+        {
+            var res = new SingleRsp();
+            Theloai theloai = new Theloai();
+            theloai.MaTheLoai = category.MaTheLoai;
+            theloai.TenTheLoai = category.TenTheLoai;
+            theloai.GhiChu = category.GhiChu;
+            res = _rep.CreateTheloai(theloai);
+            return res;
+        }
+
+        public SingleRsp UpdateTheloai(Theloai category)
+        {
+            var res = new SingleRsp();
+            Theloai theloai = new Theloai();
+            theloai.MaTheLoai = category.MaTheLoai;
+            theloai.TenTheLoai = category.TenTheLoai;
+            theloai.GhiChu = category.GhiChu;
+            res = _rep.UpdateTheloai(theloai);
+            return res;
+        }
     }
 }
